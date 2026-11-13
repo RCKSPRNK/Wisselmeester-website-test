@@ -760,7 +760,7 @@ p {
    ========================================================= */
 
 .features {
-  background: var(--background);
+  background: transparent;
 }
 
 
@@ -844,7 +844,7 @@ p {
    ========================================================= */
 
 .benefits {
-  background: var(--white);
+  background: transparent;
 }
 
 
@@ -1034,7 +1034,7 @@ p {
    ========================================================= */
 
 .site-footer {
-  background: #102f25;
+  background: #080d14;
   color: var(--white);
 
   padding-top: 65px;
