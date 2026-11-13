@@ -53,13 +53,20 @@ html {
 }
 
 
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--white);
+  background:
+    linear-gradient(
+      rgba(8, 24, 39, 0.48),
+      rgba(8, 24, 39, 0.48)
+    ),
+    url("images/background-stadium.png") center top / cover fixed no-repeat;
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
 }
+
 
 
 a {
