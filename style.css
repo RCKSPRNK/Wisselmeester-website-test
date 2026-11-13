@@ -115,35 +115,22 @@ button {
 }
 
 
+
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-
-  color: var(--green-dark);
-
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.7px;
+  text-decoration: none;
+  line-height: 0;
 }
 
-
-.brand-icon {
-  width: 40px;
-  height: 40px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--green);
-  color: var(--white);
-
-  border-radius: 12px;
-
-  font-size: 22px;
-  font-weight: 800;
+.brand-logo {
+  display: block;
+  height: 58px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
 }
+
 
 
 .main-nav {
