@@ -728,9 +728,11 @@ p {
    7. INTRODUCTIE
    ========================================================= */
 
+
 .intro {
-  background: var(--white);
+  background: transparent;
 }
+
 
 
 .intro-content {
