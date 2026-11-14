@@ -984,8 +984,88 @@ p {
 }
 
 
+
 /* =========================================================
-   10. CALL TO ACTION
+   10. VEELGESTELDE VRAGEN
+   ========================================================= */
+
+.faq {
+  background: transparent;
+}
+
+.faq-heading {
+  max-width: 760px;
+}
+
+.faq-list {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(8, 24, 39, 0.07);
+}
+
+.faq-item summary {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  list-style: none;
+  padding: 21px 60px 21px 24px;
+  color: var(--green-dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  transform: translateY(-50%);
+  color: var(--green);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.faq-item[open] summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 18px 24px 22px;
+}
+
+.faq-answer p {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.faq-item summary:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: -4px;
+  border-radius: 12px;
+}
+
+/* =========================================================
+   11. CALL TO ACTION
    ========================================================= */
 
 .cta {
@@ -1040,7 +1120,7 @@ p {
 
 
 /* =========================================================
-   11. FOOTER
+   12. FOOTER
    ========================================================= */
 
 .site-footer {
@@ -1119,7 +1199,7 @@ p {
 
 
 /* =========================================================
-   12. RESPONSIVE - TABLETS
+   13. RESPONSIVE - TABLETS
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1148,7 +1228,7 @@ p {
 
 
 /* =========================================================
-   13. RESPONSIVE - MOBIELE NAVIGATIE
+   14. RESPONSIVE - MOBIELE NAVIGATIE
    ========================================================= */
 
 @media (max-width: 760px) {
@@ -1274,7 +1354,7 @@ p {
 
 
 /* =========================================================
-   14. RESPONSIVE - KLEINE TELEFOONS
+   15. RESPONSIVE - KLEINE TELEFOONS
    ========================================================= */
 
 @media (max-width: 480px) {
@@ -1366,8 +1446,24 @@ p {
 }
 
 
+@media (max-width: 480px) {
+  .faq-item summary {
+    padding: 18px 48px 18px 18px;
+    font-size: 14px;
+  }
+
+  .faq-item summary::after {
+    right: 17px;
+  }
+
+  .faq-answer {
+    padding: 15px 18px 18px;
+  }
+}
+
+
 /* =========================================================
-   15. TOEGANKELIJKHEID
+   16. TOEGANKELIJKHEID
    ========================================================= */
 
 a:focus-visible,
