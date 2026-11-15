@@ -851,6 +851,65 @@ p {
 }
 
 
+
+/* =========================================================
+   APP OPENEN EN INSTALLEREN
+   ========================================================= */
+.button-logo {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  margin-right: 9px;
+}
+
+.main-nav .nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.install { background: transparent; }
+.install-open-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.install-logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+.install-open-copy { flex: 1; }
+.install-open-copy h3, .install-step h3 { color: var(--green-dark); margin-bottom: 7px; }
+.install-open-copy p { color: var(--text-light); font-size: 14px; }
+.install-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.install-step {
+  padding: 27px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.install-step ol { padding-left: 21px; color: var(--text-light); font-size: 14px; line-height: 1.85; }
+.install-step li { padding-left: 4px; margin-bottom: 5px; }
+.install-note { max-width: 900px; margin: 18px auto 0; color: #e2e7ed; font-size: 12px; }
+
 /* =========================================================
    12. FOOTER
    ========================================================= */
