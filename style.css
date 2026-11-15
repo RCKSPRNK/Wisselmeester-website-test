@@ -410,328 +410,100 @@ p {
 
 
 /* =========================================================
-   6. VISUELE APP-PRESENTATIE
+   6. ECHTE APP-SCREENSHOTS
    ========================================================= */
 
 .hero-visual {
-  position: relative;
   min-width: 0;
-  padding: 25px;
+  padding: 18px;
+  text-align: center;
 }
 
+.app-screenshot-frame {
+  overflow: hidden;
+  background: #080d14;
+  border: 7px solid #080d14;
+  border-radius: 30px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
 
-.visual-card {
-  position: relative;
-  z-index: 2;
+.app-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
 
-  background: var(--white);
-  padding: 25px;
-
-  border-radius: var(--radius-large);
-
-  box-shadow: 0 25px 65px rgba(18, 61, 48, 0.14);
-
+.hero-screenshot-frame {
+  width: min(100%, 390px);
+  margin: 0 auto;
   transform: rotate(1deg);
 }
 
-
-.visual-top,
-.visual-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.hero-app-screenshot {
+  max-height: 570px;
+  object-fit: contain;
 }
 
-
-.visual-top {
-  margin-bottom: 20px;
-}
-
-
-.visual-label {
-  display: block;
-
-  color: var(--text-light);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.4px;
-}
-
-
-.visual-top h3 {
-  color: var(--green-dark);
-  margin-top: 5px;
-  font-size: 20px;
-}
-
-
-.visual-icon {
-  width: 45px;
-  height: 45px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--green-light);
-  border-radius: 13px;
-
-  font-size: 23px;
-}
-
-
-/* VOETBALVELD */
-
-.pitch {
-  position: relative;
-
-  width: 100%;
-  aspect-ratio: 1.15 / 1;
-
-  overflow: hidden;
-
-  background: #25804e;
-
-  border: 4px solid rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.035) 0,
-      rgba(255, 255, 255, 0.035) 40px,
-      transparent 40px,
-      transparent 80px
-    );
-}
-
-
-.pitch::before {
-  content: "";
-
-  position: absolute;
-  inset: 8%;
-
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  border-radius: 3px;
-}
-
-
-.center-line {
-  position: absolute;
-
-  top: 50%;
-  left: 8%;
-  right: 8%;
-
-  height: 2px;
-
-  background: rgba(255, 255, 255, 0.55);
-}
-
-
-.center-circle {
-  position: absolute;
-
-  width: 28%;
-  aspect-ratio: 1;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  border-radius: 50%;
-}
-
-
-.goal {
-  position: absolute;
-
-  left: 35%;
-  width: 30%;
-  height: 7%;
-
-  border: 2px solid rgba(255, 255, 255, 0.55);
-}
-
-
-.goal-top {
-  top: 8%;
-  border-top: none;
-}
-
-
-.goal-bottom {
-  bottom: 8%;
-  border-bottom: none;
-}
-
-
-/* SPELERS OP HET VELD */
-
-.player {
-  position: absolute;
-  z-index: 3;
-
-  width: 33px;
-  height: 33px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #ffffff;
-  color: var(--green-dark);
-
-  border: 3px solid #d9efe0;
-  border-radius: 50%;
-
+.screenshot-caption {
+  margin: 15px auto 0;
+  color: #e2e7ed;
   font-size: 12px;
-  font-weight: 800;
-
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
+  text-align: center;
 }
 
 
-.player-1 {
-  top: 16%;
-  left: 50%;
-  transform: translateX(-50%);
+/* SCREENSHOTGALERIJ */
+
+.app-screenshots {
+  background: transparent;
 }
 
-
-.player-2 {
-  top: 36%;
-  left: 25%;
+.app-screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  align-items: start;
 }
 
-
-.player-3 {
-  top: 36%;
-  right: 25%;
-}
-
-
-.player-4 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.player-5 {
-  bottom: 24%;
-  left: 25%;
-}
-
-
-.player-6 {
-  bottom: 24%;
-  right: 25%;
-}
-
-
-.player-7 {
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-.visual-footer {
-  padding-top: 20px;
-}
-
-
-.visual-footer strong {
-  display: block;
-  margin-top: 3px;
-
-  color: var(--green-dark);
-  font-size: 14px;
-}
-
-
-.check-icon {
-  width: 36px;
-  height: 36px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--green-light);
-  color: var(--green);
-
-  border-radius: 50%;
-
-  font-size: 19px;
-  font-weight: 800;
-}
-
-
-/* LOSSE KAARTEN */
-
-.floating-card {
-  position: absolute;
-  z-index: 4;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
+.app-screenshot-card {
+  min-width: 0;
+  padding: 18px;
   background: var(--white);
-  padding: 13px 17px;
-
-  border-radius: 13px;
-
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-
-.floating-card-top {
-  top: 0;
-  right: -5px;
+.app-screenshot-card-image {
+  overflow: hidden;
+  max-width: 310px;
+  margin: 0 auto 18px;
+  background: #080d14;
+  border: 5px solid #080d14;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(8, 24, 39, 0.16);
 }
 
-
-.floating-card-bottom {
-  bottom: 0;
-  left: -5px;
-}
-
-
-.floating-icon {
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--green-light);
-  color: var(--green);
-
-  border-radius: 10px;
-
-  font-size: 20px;
-  font-weight: 800;
-}
-
-
-.floating-card strong {
+.app-screenshot-card-image img {
   display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.app-screenshot-card h3 {
+  margin-bottom: 9px;
   color: var(--green-dark);
-  font-size: 13px;
+  font-size: 18px;
+  letter-spacing: -0.3px;
 }
 
-
-.floating-card small {
-  display: block;
+.app-screenshot-card p {
   color: var(--text-light);
-  font-size: 11px;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 
@@ -929,60 +701,20 @@ p {
 
 
 .benefits-visual {
-  min-height: 340px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    radial-gradient(
-      circle at center,
-      #dceee2 0%,
-      #edf5ef 55%,
-      #f7faf8 100%
-    );
-
-  border-radius: var(--radius-large);
+  min-width: 0;
+  text-align: center;
 }
 
-
-.benefits-circle {
-  width: 220px;
-  height: 220px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  background: var(--green);
-
-  border: 12px solid rgba(255, 255, 255, 0.65);
-  border-radius: 50%;
-
-  box-shadow: 0 15px 40px rgba(7, 91, 66, 0.2);
-
-  color: var(--white);
+.benefits-screenshot-frame {
+  width: min(100%, 390px);
+  margin: 0 auto;
+  transform: rotate(-1deg);
 }
 
-
-.benefits-circle span {
-  font-size: 43px;
-  margin-bottom: 8px;
+.benefits-app-screenshot {
+  max-height: 560px;
+  object-fit: contain;
 }
-
-
-.benefits-circle strong {
-  font-size: 21px;
-}
-
-
-.benefits-circle small {
-  color: #d6e9de;
-  font-size: 13px;
-}
-
 
 
 /* =========================================================
@@ -1220,6 +952,10 @@ p {
     gap: 40px;
   }
 
+  .app-screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .main-nav {
     gap: 20px;
   }
@@ -1337,8 +1073,15 @@ p {
     gap: 40px;
   }
 
-  .benefits-visual {
-    min-height: 290px;
+  .app-screenshot-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .hero-screenshot-frame,
+  .benefits-screenshot-frame {
+    width: min(100%, 360px);
   }
 
   .footer-content {
@@ -1386,6 +1129,19 @@ p {
 
   .hero-note {
     font-size: 11px;
+  }
+
+  .hero-visual {
+    padding: 12px 4px;
+  }
+
+  .app-screenshot-frame {
+    border-width: 5px;
+    border-radius: 24px;
+  }
+
+  .app-screenshot {
+    border-radius: 17px;
   }
 
   .visual-card {
