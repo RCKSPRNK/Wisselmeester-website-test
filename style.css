@@ -67,6 +67,22 @@ body {
   overflow-x: hidden;
 }
 
+/* Performance: gebruik AVIF/WebP waar de browser dit ondersteunt,
+   met de bovenstaande PNG-regel als automatische fallback voor
+   browsers zonder image-set()-ondersteuning. */
+body {
+  background:
+    linear-gradient(
+      rgba(8, 24, 39, 0.48),
+      rgba(8, 24, 39, 0.48)
+    ),
+    image-set(
+      url("images/background-stadium.avif") type("image/avif") 1x,
+      url("images/background-stadium.webp") type("image/webp") 1x,
+      url("images/background-stadium.png") type("image/png") 1x
+    ) center top / cover fixed no-repeat;
+}
+
 
 
 a {
